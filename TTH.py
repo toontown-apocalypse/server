@@ -1,27 +1,9 @@
-from toontown.launcher import os
-from toontown.launcher import sys
-from toontown.launcher import time
-from toontown.launcher import types
-from toontown.launcher import math
-from pandac.PandaModules import *
-from toontown.launcher import
-from toontown.launcher import andom
-from sys import platform
-from toontown.launcher import sys
-from toontown.launcher import tempfile
-from toontown.launcher import time
-
-from toontown.launcher import ToontownGlobals
-from toontown.launcher import ToontownLoader
-from toontown.launcher import ToontownDownloadWatcher
-from toontown.launcher import MarginGlobals
-from toontown.launcher MarginManager import MarginManager
-from toontown.launcher import NametagGlobals
-from toontown.launcher importTTLocalizer
-from toontown.launcher import ToontownAccess
-from toontown.launcher import ToontownBattleGlobals
-from toontown.launcher import TTDialog
-toontown.launcher import __builtin__
+import os
+import sys
+from toontown.toonbase import toontown.toonbase.CilentStart
+from toontown.launcher import ToontownGlobals.py
+from toontown.launcher import ToontownLoader.py
+from toontown.launcher import __builtin__.py
 
 
 __builtin__.process = 'client'
