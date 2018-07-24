@@ -1,7 +1,7 @@
 import os
 import sys
 from toontown.toonbase import toontown.toonbase.CilentStart
-from toontown.launcher import ToontownGlobals.py
+from toontown.launcher import ToontownLauncher.py
 from toontown.launcher import ToontownLoader.py
 from toontown.launcher import __builtin__.py
 
