@@ -1,13 +1,15 @@
-print 'ToontownStart: Starting Toontown...'
+print 'hello and welome to Toontown Mythical'
+
+ title 'Toontown Mythical'
 
 loadPrcFile('config/config.prc')
 
 try:
     launcher
 except:
-    from toontown.launcher.ToontownDummyLauncher import ToontownDummyLauncher
+    from toontown.launcher start "ToontownLauncher.py"
     launcher = ToontownDummyLauncher()
-    __builtin__.launcher = launcher
+print 'ToontownStart: Starting Toontown...'
 
 pollingDelay = 0.5
 print 'ToontownStart: Polling for game2 to finish...'
@@ -15,16 +17,13 @@ while not launcher.getGame2Done():
     time.sleep(pollingDelay)
 print 'ToontownStart: Game2 is finished.'
 print 'ToontownStart: Starting the game.'
-from pandac.PandaModules import *
 if launcher.isDummy():
     http = HTTPClient()
 else:
     http = launcher.http
 tempLoader = Loader()
 backgroundNode = tempLoader.loadSync(Filename('phase_3/models/gui/loading-background'))
-from direct.gui import DirectGuiGlobals
 print 'ToontownStart: setting default font'
-import ToontownGlobals
 DirectGuiGlobals.setDefaultFontFunc(ToontownGlobals.getInterfaceFont)
 launcher.setPandaErrorCode(7)
 if base.win == None:
@@ -56,24 +55,20 @@ if base.musicManagerIsValid:
     DirectGuiGlobals.setDefaultRolloverSound(base.loadSfx('phase_3/audio/sfx/GUI_rollover.mp3'))
     DirectGuiGlobals.setDefaultClickSound(base.loadSfx('phase_3/audio/sfx/GUI_create_toon_fwd.mp3'))
 else:
-    music = None
-
-from direct.gui.DirectGui
+    music = true
 serverVersion = base.config.GetString('server-version', 'no_version_set')
 print 'ToontownStart: serverVersion: ', serverVersion
 version = OnscreenText(serverVersion, pos = (-1.3, -0.97499999999999998), scale = 0.059999999999999998, fg = Vec4(0, 0, 1, 0.59999999999999998), align = TextNode.ALeft)
 loader.beginBulkLoad('init', TTLocalizer.LoaderLabel, 138, 0, TTLocalizer.TIP_NONE)
 
-from direct.showbase.MessengerGlobal import *
-from toontown.distributed import ToontownClientRepository
+from ToontownStart: starting... the game
+from toontown.distributed = ToontownClientRepository
 cr = ToontownClientRepository.ToontownClientRepository(serverVersion, launcher)
 cr.music = music
 del music
 base.initNametagGlobals()
 base.cr = cr
 loader.endBulkLoad('init')
-from otp.friends import FriendManager
-from otp.distributed.OtpDoGlobals import *
 cr.generateGlobalObject(OTP_DO_ID_FRIEND_MANAGER, 'FriendManager')
 if not launcher.isDummy():
     base.startShow(cr, launcher.getGameServer())
