@@ -1,7 +1,0 @@
-instructions on how to play:
-first download corporate clash
-step 2: add new folder in downloads name it toontown
-step 3: add 2 new folders inside toontown called launcher and toonbase
-step 4: add these files in launcher: __builtin__.py and ToontownLoader.py and ToontownLauncher.py
-then add these files in toonbase: toontown.toonbase.CilentStart
-finally: open it with corporate clash launcher
