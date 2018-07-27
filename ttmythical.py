@@ -7,7 +7,7 @@ loadPrcFile('config/config.prc')
 try:
     launcher
 except:
-    from toontown.launcher start "ToontownLauncher.py"
+    from toontown.launcher start "ToontownLauncher.py" and "Toonbase.py"
     launcher = ToontownDummyLauncher()
 print 'ToontownStart: Starting Toontown...'
 
