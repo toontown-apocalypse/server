@@ -3,6 +3,7 @@
 cd ..
 
 'title' 'Toontown Mythical'
+
 from panda3d.core import *
 from direct.directnotify import DirectNotifyGlobal
 import os
